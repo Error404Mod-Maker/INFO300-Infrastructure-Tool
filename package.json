@@ -1,0 +1,8 @@
+{
+  "name": "info300-infrastructure-tool",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": { "start": "node app.js" },
+  "dependencies": { "readline-sync": "^1.4.10" }
+}
