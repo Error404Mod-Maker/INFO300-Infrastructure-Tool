@@ -1,3 +1,5 @@
+Samir Knight
+
 INFO 300 - Infrastructure Decision Tool
 
 This is a Node.js program with two options: a subnet host checker and a compute environment selector.
