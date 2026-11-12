@@ -34,6 +34,7 @@ function subnetChecker() {
     console.log('The subnet CIDR is consistent with the VPC CIDR.');
     var available = Math.pow(2, 32 - subnet) - 5;
     console.log('AWS reserves 5 IP addresses in each subnet.');
+    console.log('Usable IP addresses: ' + available);
     console.log('Devices requested: ' + devices);
     if (available >= devices) {
         console.log('The subnet has enough IP addresses.');
