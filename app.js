@@ -27,14 +27,14 @@ function subnetChecker() {
     var subnet = getCidr('Subnet CIDR: ');
     var devices = getNumber('Number of devices: ', 1);
 
-    if (subnet < vpc) {
+    while (subnet < vpc) {
         console.log('This subnet CIDR is not consistent with the VPC CIDR.');
-        return;
+        subnet = getCidr('Enter another subnet CIDR: ');
     }
     console.log('The subnet CIDR is consistent with the VPC CIDR.');
     var available = Math.pow(2, 32 - subnet) - 5;
     console.log('AWS reserves 5 IP addresses in each subnet.');
-    console.log('Usable IP addresses: ' + available);
+    console.log('Devices requested: ' + devices);
     if (available >= devices) {
         console.log('The subnet has enough IP addresses.');
         console.log('Unused IP addresses: ' + (available - devices));
